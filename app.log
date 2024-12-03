@@ -1071,3 +1071,232 @@
 2024-12-03 16:06:35,338 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 279
 2024-12-03 16:06:35,339 INFO: Heat pump turned off.
 2024-12-03 16:06:35,343 INFO: 127.0.0.1 - - [03/Dec/2024 16:06:35] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 16:55:31,775 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-12-03 16:55:31,775 INFO: [33mPress CTRL+C to quit[0m
+2024-12-03 16:55:49,485 INFO: 127.0.0.1 - - [03/Dec/2024 16:55:49] "GET / HTTP/1.1" 200 -
+2024-12-03 16:55:49,488 INFO: 127.0.0.1 - - [03/Dec/2024 16:55:49] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 16:55:49,489 INFO: 127.0.0.1 - - [03/Dec/2024 16:55:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 16:55:49,496 INFO: 127.0.0.1 - - [03/Dec/2024 16:55:49] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 16:55:49,514 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 16:55:49,519 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:55:49,671 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 16:55:49,673 INFO: Current price: 148.62 øre/kWh
+2024-12-03 16:55:49,677 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:55:49,677 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:55:49,679 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:00,915 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 16:56:00,917 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:56:01,069 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 16:56:01,071 INFO: Current price: 148.62 øre/kWh
+2024-12-03 16:56:01,075 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:01,076 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:01,079 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:01,174 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 279
+2024-12-03 16:56:01,175 INFO: Heat pump turned off.
+2024-12-03 16:56:01,179 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:01] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 16:56:01,187 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:01,187 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:01,189 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:02,566 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 16:56:02,566 INFO: Heat pump turned off.
+2024-12-03 16:56:02,567 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:02] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 16:56:02,570 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:02,570 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:02,571 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:03,734 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 277
+2024-12-03 16:56:03,735 INFO: Heat pump turned off.
+2024-12-03 16:56:03,740 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:03] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 16:56:04,120 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 16:56:04,121 INFO: Heat pump turned off.
+2024-12-03 16:56:04,126 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:04] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 16:56:04,844 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK2.json
+2024-12-03 16:56:04,847 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:56:04,997 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK2.json HTTP/11" 200 None
+2024-12-03 16:56:04,999 INFO: Current price: 153.03 øre/kWh
+2024-12-03 16:56:05,002 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:05,002 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:05,005 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:06,334 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 275
+2024-12-03 16:56:06,335 INFO: Heat pump turned off.
+2024-12-03 16:56:06,339 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:06] "GET /api/strompris?pris_klasse=DK2 HTTP/1.1" 200 -
+2024-12-03 16:56:06,343 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:06,343 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:06,345 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:08,355 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 276
+2024-12-03 16:56:08,356 INFO: Heat pump turned off.
+2024-12-03 16:56:08,360 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:08] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 16:56:24,276 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "GET / HTTP/1.1" 200 -
+2024-12-03 16:56:24,279 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 16:56:24,281 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 16:56:24,284 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 16:56:24,285 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 16:56:24,288 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 16:56:24,291 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 16:56:24,291 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:56:24,437 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 16:56:24,439 INFO: Current price: 148.62 øre/kWh
+2024-12-03 16:56:24,442 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:24,442 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:24,444 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:24,944 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "GET /login HTTP/1.1" 200 -
+2024-12-03 16:56:24,956 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 16:56:24,957 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:24] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 16:56:26,198 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 277
+2024-12-03 16:56:26,200 INFO: Heat pump turned off.
+2024-12-03 16:56:26,205 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:26] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 16:56:36,189 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-03 16:56:36,535 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:36] "GET / HTTP/1.1" 200 -
+2024-12-03 16:56:36,545 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:36] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 16:56:36,545 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 16:56:36,550 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 16:56:36,555 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:36] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 16:56:36,557 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:56:36,695 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 16:56:36,696 INFO: Current price: 148.62 øre/kWh
+2024-12-03 16:56:36,697 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:36,697 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:36,699 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:37,359 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 16:56:37,360 INFO: Heat pump turned off.
+2024-12-03 16:56:37,361 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:37] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 16:56:37,365 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:37,365 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:37,366 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:38,179 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 16:56:38,179 INFO: Heat pump turned off.
+2024-12-03 16:56:38,183 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:38] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 16:56:49,355 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK2.json
+2024-12-03 16:56:49,357 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:56:49,501 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK2.json HTTP/11" 200 None
+2024-12-03 16:56:49,501 INFO: Current price: 153.03 øre/kWh
+2024-12-03 16:56:49,502 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:49,502 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:49,503 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:50,365 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 16:56:50,365 INFO: Heat pump turned off.
+2024-12-03 16:56:50,368 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:50] "GET /api/strompris?pris_klasse=DK2 HTTP/1.1" 200 -
+2024-12-03 16:56:50,372 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:56:50,373 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:56:50,374 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:56:51,625 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 16:56:51,625 INFO: Heat pump turned off.
+2024-12-03 16:56:51,627 INFO: 127.0.0.1 - - [03/Dec/2024 16:56:51] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 16:59:48,049 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-12-03 16:59:48,049 INFO: [33mPress CTRL+C to quit[0m
+2024-12-03 16:59:52,075 INFO: 127.0.0.1 - - [03/Dec/2024 16:59:52] "GET / HTTP/1.1" 200 -
+2024-12-03 16:59:52,086 INFO: 127.0.0.1 - - [03/Dec/2024 16:59:52] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 16:59:52,087 INFO: 127.0.0.1 - - [03/Dec/2024 16:59:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 16:59:52,095 INFO: 127.0.0.1 - - [03/Dec/2024 16:59:52] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 16:59:52,121 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 16:59:52,129 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 16:59:52,280 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 16:59:52,281 INFO: Current price: 148.62 øre/kWh
+2024-12-03 16:59:52,282 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:59:52,282 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:59:52,283 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:59:53,051 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 277
+2024-12-03 16:59:53,053 INFO: Heat pump turned off.
+2024-12-03 16:59:53,058 INFO: 127.0.0.1 - - [03/Dec/2024 16:59:53] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 16:59:53,066 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 16:59:53,066 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 16:59:53,069 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 16:59:54,382 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 276
+2024-12-03 16:59:54,383 INFO: Heat pump turned off.
+2024-12-03 16:59:54,387 INFO: 127.0.0.1 - - [03/Dec/2024 16:59:54] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 17:00:07,866 INFO: Threshold saved successfully.
+2024-12-03 17:00:07,867 INFO: 127.0.0.1 - - [03/Dec/2024 17:00:07] "POST /api/set_threshold HTTP/1.1" 200 -
+2024-12-03 17:00:07,872 INFO: 127.0.0.1 - - [03/Dec/2024 17:00:07] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 18:45:39,519 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-12-03 18:45:39,519 INFO: [33mPress CTRL+C to quit[0m
+2024-12-03 18:45:49,244 INFO: 127.0.0.1 - - [03/Dec/2024 18:45:49] "GET / HTTP/1.1" 200 -
+2024-12-03 18:45:49,253 INFO: 127.0.0.1 - - [03/Dec/2024 18:45:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 18:45:49,261 INFO: 127.0.0.1 - - [03/Dec/2024 18:45:49] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 18:45:49,284 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 18:45:49,295 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 18:45:49,439 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 18:45:49,441 INFO: Current price: 147.58 øre/kWh
+2024-12-03 18:45:49,444 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:45:49,444 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:45:49,446 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:45:50,187 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 280
+2024-12-03 18:45:50,188 INFO: Heat pump turned off.
+2024-12-03 18:45:50,189 INFO: 127.0.0.1 - - [03/Dec/2024 18:45:50] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 18:45:50,193 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:45:50,193 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:45:50,195 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:45:51,356 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 277
+2024-12-03 18:45:51,357 INFO: Heat pump turned off.
+2024-12-03 18:45:51,361 INFO: 127.0.0.1 - - [03/Dec/2024 18:45:51] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 18:45:58,475 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK2.json
+2024-12-03 18:45:58,478 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 18:45:58,617 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK2.json HTTP/11" 200 None
+2024-12-03 18:45:58,619 INFO: Current price: 147.59 øre/kWh
+2024-12-03 18:45:58,623 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:45:58,623 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:45:58,624 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:45:59,847 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 18:45:59,849 INFO: Heat pump turned off.
+2024-12-03 18:45:59,853 INFO: 127.0.0.1 - - [03/Dec/2024 18:45:59] "GET /api/strompris?pris_klasse=DK2 HTTP/1.1" 200 -
+2024-12-03 18:45:59,860 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:45:59,860 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:45:59,863 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:46:00,769 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 273
+2024-12-03 18:46:00,770 INFO: Heat pump turned off.
+2024-12-03 18:46:00,775 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:00] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 18:46:03,043 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 18:46:03,045 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 18:46:03,293 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 18:46:03,294 INFO: Current price: 147.58 øre/kWh
+2024-12-03 18:46:03,296 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:46:03,296 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:46:03,299 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:46:04,557 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 18:46:04,558 INFO: Heat pump turned off.
+2024-12-03 18:46:04,562 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:04] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 18:46:04,567 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:46:04,567 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:46:04,569 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:46:05,273 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 18:46:05,273 INFO: Heat pump turned off.
+2024-12-03 18:46:05,274 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:05] "POST /api/turn_off HTTP/1.1" 200 -
+2024-12-03 18:46:21,427 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:21] "GET / HTTP/1.1" 200 -
+2024-12-03 18:46:21,431 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:21] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 18:46:21,432 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 18:46:21,437 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 18:46:21,441 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 18:46:21,443 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:21] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 18:46:21,444 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 18:46:21,619 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 18:46:21,621 INFO: Current price: 147.58 øre/kWh
+2024-12-03 18:46:21,623 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:46:21,623 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:46:21,625 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:46:22,086 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:22] "GET /login HTTP/1.1" 200 -
+2024-12-03 18:46:22,097 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 18:46:22,098 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:22] "[36mGET /static/img/writehouseRGB.png HTTP/1.1[0m" 304 -
+2024-12-03 18:46:22,886 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 18:46:22,887 INFO: Heat pump turned off.
+2024-12-03 18:46:22,892 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:22] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 18:46:41,305 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-03 18:46:41,633 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:41] "GET / HTTP/1.1" 200 -
+2024-12-03 18:46:41,638 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-03 18:46:41,642 DEBUG: Fetching price from: https://www.elprisenligenu.dk/api/v1/prices/2024/12-03_DK1.json
+2024-12-03 18:46:41,645 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:41] "GET /api/get_threshold HTTP/1.1" 200 -
+2024-12-03 18:46:41,646 DEBUG: Starting new HTTPS connection (1): www.elprisenligenu.dk:443
+2024-12-03 18:46:41,786 DEBUG: https://www.elprisenligenu.dk:443 "GET /api/v1/prices/2024/12-03_DK1.json HTTP/11" 200 None
+2024-12-03 18:46:41,788 INFO: Current price: 147.58 øre/kWh
+2024-12-03 18:46:41,792 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:46:41,792 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:46:41,794 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:46:43,367 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 278
+2024-12-03 18:46:43,368 INFO: Heat pump turned off.
+2024-12-03 18:46:43,372 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:43] "GET /api/strompris?pris_klasse=DK1 HTTP/1.1" 200 -
+2024-12-03 18:46:43,377 DEBUG: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-12-03 18:46:43,377 DEBUG: Sending request to Sensibo API: https://home.sensibo.com/api/v2/pods/oUAm2yLC/acStates
+2024-12-03 18:46:43,379 DEBUG: Starting new HTTPS connection (1): home.sensibo.com:443
+2024-12-03 18:46:44,595 DEBUG: https://home.sensibo.com:443 "POST /api/v2/pods/oUAm2yLC/acStates?apiKey=lpWyXqc18Htrxj9RR9jpvxOGhqLFAg HTTP/11" 200 279
+2024-12-03 18:46:44,596 INFO: Heat pump turned off.
+2024-12-03 18:46:44,601 INFO: 127.0.0.1 - - [03/Dec/2024 18:46:44] "POST /api/turn_off HTTP/1.1" 200 -

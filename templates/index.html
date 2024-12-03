@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,30 +25,27 @@
 </head>
 <body>
     <!-- Header -->
-
+    
 
     <!-- Main Content -->
     <main>
         <div class="container">
             <!-- Electricity Price Card -->
             <section id="price-container" class="card">
-                <h2 id="current-price-class">Gjeldende Pris</h2>
+                <h2 id="current-price-class">Gældende Pris</h2>
                 <p id="price-display" class="price-display">-- øre/kWh</p>
-                <p id="last-updated" class="last-updated">Sist oppdatert: --:--</p>
-                <label for="price-class">Velg pris område:</label>
+                <p id="last-updated" class="last-updated">Sidst opdateret: --:--</p>
+                <label for="price-class">Vælg pris område:</label>
                 <select id="price-class" onchange="updatePriceClass(); fetchElectricityPrice()">
-                    <option value="NO1">Oslo / Øst-Norge NO1</option>
-                    <option value="NO2">Kristiansand / Sør-Norge NO2</option>
-                    <option value="NO3">Trondheim / Midt-Norge NO3</option>
-                    <option value="NO4">Tromsø / Nord-Norge NO4</option>
-                    <option value="NO5">Bergen / Vest-Norge NO5</option>
+                    <option value="DK1">Aarhus/Vest for Storebælt DK1</option>
+                    <option value="DK2">København/Øst for Storebælt DK2</option>
                 </select>
-                <button onclick="fetchElectricityPrice()" class="button primary" aria-label="Oppdater strømpris">
-                    <span class="button-text">Oppdater Pris</span>
+                <button onclick="fetchElectricityPrice()" class="button primary" aria-label="Opdater strømpris">
+                    <span class="button-text">Opdater Pris</span>
                 </button>
                 <p style="margin-top: 1rem;">
-                    <a href="https://www.hvakosterstrommen.no">
-                        <img src="https://ik.imagekit.io/ajdfkwyt/hva-koster-strommen/strompriser-levert-av-hvakosterstrommen_oTtWvqeiB.png" alt="Strømpriser levert av Hva koster strømmen.no"  width="200" height="45">
+                    <a href="https://www.elprisenligenu.dk">
+                        <img src="https://ik.imagekit.io/ajdfkwyt/hva-koster-strommen/elpriser-leveret-af-elprisenligenu_LJNbbujZAX.png" alt="Elpriser leveret af Elprisen lige nu.dk" width="200" height="45">
                     </a>
                 </p>
             </section>
@@ -59,11 +56,11 @@
                 <div class="control-panel">
                     <!-- Power Controls -->
                     <div class="button-group">
-                        <button onclick="turnOnHeatPump()" class="button success" id="on-button" aria-label="Slå på varmepumpe">
-                            <span class="button-text">PÅ</span>
+                        <button onclick="turnOnHeatPump()" class="button success" id="on-button" aria-label="Tænd varmepumpe">
+                            <span class="button-text">Tænd</span>
                         </button>
-                        <button onclick="turnOffHeatPump()" class="button danger" id="off-button" aria-label="Slå av varmepumpe">
-                            <span class="button-text">AV</span>
+                        <button onclick="turnOffHeatPump()" class="button danger" id="off-button" aria-label="Sluk varmepumpe">
+                            <span class="button-text">Sluk</span>
                         </button>
                     </div>
 
@@ -72,7 +69,7 @@
                         <h3>PÅ lik/under AV over</h3>
                         <div class="threshold-display">
                             <div class="threshold-item">
-                                <label>Prisgrense:</label>
+                                <label>Prisgrænse:</label>
                                 <span id="current-price-threshold" class="price">--</span>
                                 <span class="unit">øre/kWh</span>
                             </div>
@@ -80,10 +77,11 @@
 
                         <div class="threshold-inputs">
                             <div class="input-group">
+                               
                                 <input type="number" id="price-threshold" min="-100" step="0.1" required>
                             </div>
-                            <button onclick="setThreshold()" class="button primary" aria-label="Oppdater grense">
-                                <span class="button-text">Oppdater Grense</span>
+                            <button onclick="setThreshold()" class="button primary" aria-label="Opdater grænse">
+                                <span class="button-text">Opdater Grænse</span>
                             </button>
                         </div>
                     </div>
@@ -94,7 +92,7 @@
     </main>
 
     <!-- Footer -->
-
+    
 
     <!-- Scripts -->
     <script>
@@ -104,7 +102,7 @@
             const priceClass = document.getElementById('price-class');
             const selectedOption = priceClass.options[priceClass.selectedIndex].text;
             const currentPriceClass = document.getElementById('current-price-class');
-            currentPriceClass.innerText = `Gjeldende Pris (${selectedOption})`;
+            currentPriceClass.innerText = `Gældende Pris (${selectedOption})`;
         }
 
         async function fetchElectricityPrice() {
@@ -127,14 +125,14 @@
                     const now = new Date();
                     const hours = now.getHours().toString().padStart(2, '0');
                     const minutes = now.getMinutes().toString().padStart(2, '0');
-                    lastUpdated.innerText = `Sist oppdatert: ${hours}:${minutes}`;
+                    lastUpdated.innerText = `Sidst opdateret: ${hours}:${minutes}`;
                     checkPriceAgainstThreshold(data.pris);
                 } else {
                     throw new Error(data.error || 'Invalid price data received');
                 }
             } catch (error) {
                 console.error('Price fetch error:', error);
-                priceDisplay.innerHTML = `<span class="error-message">Feilet å hente pris: ${error.message}</span>`;
+                priceDisplay.innerHTML = `<span class="error-message">Fejl ved hentning af pris: ${error.message}</span>`;
             }
         }
 
@@ -190,12 +188,12 @@
             const priceThreshold = parseFloat(document.getElementById('price-threshold').value);
 
             if (isNaN(priceThreshold)) {
-                status.innerText = 'Vennligst skriv inn en gyldig pris';
+                status.innerText = 'Indtast venligst en gyldig pris';
                 return;
             }
 
             try {
-                status.innerText = 'Oppdaterer grense...';
+                status.innerText = 'Opdaterer grænse...';
                 const response = await fetch('/api/set_threshold', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -207,11 +205,11 @@
                     status.innerText = data.status;
                     await fetchThreshold();
                 } else {
-                    throw new Error(data.error || 'Kunne ikke oppdatere grense');
+                    throw new Error(data.error || 'Kunne ikke opdatere grænse');
                 }
             } catch (error) {
                 console.error('Threshold update error:', error);
-                status.innerText = `Kunne ikke oppdatere grense: ${error.message}`;
+                status.innerText = `Kunne ikke opdatere grænse: ${error.message}`;
             }
         }
 

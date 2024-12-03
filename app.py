@@ -20,7 +20,7 @@ load_dotenv()
 SENSIBO_API_KEY = os.getenv('SENSIBO_API_KEY')
 SENSIBO_DEVICE_ID = os.getenv('SENSIBO_DEVICE_ID')
 SENSIBO_API_BASE = "https://home.sensibo.com/api/v2"
-PRIS_KLASSE = os.getenv('PRIS_KLASSE', 'NO1')
+PRIS_KLASSE = os.getenv('PRIS_KLASSE', 'DK1')
 MIN_TEMP = int(os.getenv('MIN_TEMP', 10))
 DEFAULT_TEMP = int(os.getenv('DEFAULT_TEMP', 22))
 THRESHOLD_FILE = 'threshold.json'
@@ -44,7 +44,7 @@ def get_cet_time() -> datetime:
     """Get current time in CET/CEST timezone"""
     try:
         utc_now = datetime.now(timezone.utc)
-        cet_tz = pytz.timezone('Europe/Stockholm')
+        cet_tz = pytz.timezone('Europe/Copenhagen')
         return utc_now.astimezone(cet_tz)
     except Exception as e:
         logger.error(f"Error getting CET time: {e}")
@@ -174,7 +174,7 @@ def index():
 @login_required
 def strompris():
     try:
-        pris_klasse = request.args.get('pris_klasse', 'NO1')  # Default to NO1 if not provided
+        pris_klasse = request.args.get('pris_klasse', 'DK1')  # Default to DK1 if not provided
         price = get_current_price(pris_klasse)
         if price is not None:
             check_price_and_control_heat_pump(price)
@@ -210,22 +210,6 @@ def set_threshold():
         logger.error(f"Error setting threshold: {e}")
         return jsonify({"error": "Internal server error"}), 500
 
-@app.route('/api/set_pris_klasse', methods=['POST'])
-@login_required
-def set_pris_klasse():
-    try:
-        data = request.get_json()
-        pris_klasse = data.get('pris_klasse')
-        if pris_klasse in ['NO1', 'NO2', 'NO3', 'NO4', 'NO5']:
-            global PRIS_KLASSE
-            PRIS_KLASSE = pris_klasse
-            return jsonify({"status": "Pris klasse updated"})
-        else:
-            return jsonify({"error": "Invalid pris klasse"}), 400
-    except Exception as e:
-        logger.error(f"Error setting pris klasse: {e}")
-        return jsonify({"error": "Internal server error"}), 500
-
 @app.route('/api/turn_on', methods=['POST'])
 @login_required
 def turn_on():
@@ -252,6 +236,22 @@ def turn_off():
         logger.error(f"Error turning off heat pump: {e}")
         return jsonify({"error": "Internal server error"}), 500
 
+@app.route('/api/set_pris_klasse', methods=['POST'])
+@login_required
+def set_pris_klasse():
+    try:
+        data = request.get_json()
+        pris_klasse = data.get('pris_klasse')
+        if pris_klasse in ['DK1', 'DK2']:
+            global PRIS_KLASSE
+            PRIS_KLASSE = pris_klasse
+            return jsonify({"status": "Pris klasse updated"})
+        else:
+            return jsonify({"error": "Invalid pris klasse"}), 400
+    except Exception as e:
+        logger.error(f"Error setting pris klasse: {e}")
+        return jsonify({"error": "Internal server error"}), 500
+
 # Function to get the current electricity price
 def get_current_price(pris_klasse: str) -> Optional[float]:
     try:
@@ -261,7 +261,7 @@ def get_current_price(pris_klasse: str) -> Optional[float]:
         dag = f"{dato.day:02d}"
         time = dato.hour
 
-        pris_url = f"https://www.hvakosterstrommen.no/api/v1/prices/{år}/{måned}-{dag}_{pris_klasse}.json"
+        pris_url = f"https://www.elprisenligenu.dk/api/v1/prices/{år}/{måned}-{dag}_{pris_klasse}.json"
         logger.debug(f"Fetching price from: {pris_url}")
         
         respons = requests.get(pris_url, timeout=10)
@@ -270,7 +270,7 @@ def get_current_price(pris_klasse: str) -> Optional[float]:
         strømpriser = respons.json()
         
         if isinstance(strømpriser, list) and len(strømpriser) > time:
-            nåværende_pris = strømpriser[time]["NOK_per_kWh"]
+            nåværende_pris = strømpriser[time]["DKK_per_kWh"]
             nåværende_pris = round(nåværende_pris * 100, 2)  # Convert to øre/kWh
             logger.info(f"Current price: {nåværende_pris:.2f} øre/kWh")
             return nåværende_pris
